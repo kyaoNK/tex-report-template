@@ -1,29 +1,30 @@
-\documentclass[a4j,uplatex,dvipdfmx,11pt]{jsarticle}    % 文章クラスとオプション設定
+\documentclass[a4j,uplatex,dvipdfmx,10pt]{jsarticle}    % 文章クラスとオプション設定
 %%%%%%%%%% スタイル %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% 複数行コメント
-\usepackage{comment}    
 
 % 余白の調整
 \usepackage[top=30truemm,bottom=30truemm,left=20truemm,right=20truemm]{geometry}
+
+% 複数行コメント
+\usepackage{comment}    
 
 % セクション設定
 \renewcommand{\presectionname}{第}
 \renewcommand{\postsectionname}{章}
 
-% 数式関連
+% 数式
 \usepackage{amsmath,amssymb,nccmath}    % 数式
-\usepackage{bm}         % ベクトルの太文字
+\usepackage{bm}         % ベクトル
 \newcommand{\alignref}[1]{\textbf{式(\ref{#1})}}    % 数式参照
 
-% 画像関連
+% 画像
 \usepackage{graphicx} % 画像
 \usepackage{here}% figureの位置調整
 \renewcommand{\figurename}{\textbf{Fig.}}    % 画像キャプション
 \newcommand{\figurenameref}[1]{\textbf{Fig.\ref{#1}}}   % 画像の参照を定義
 
-% 表設定
-\usepackage{multirow}   % 表の行の結合
+% 表
+\usepackage{multirow}   % 表の縦セルの結合
+\usepackage{multicol}   % 表の横セルの結合
 \usepackage{longtable}  % ページをまたぐ長い表
 \renewcommand{\tablename}{\textbf{Table.}}   % 表キャプション
 \newcommand{\tablenameref}[1]{\textbf{Table.\ref{#1}}}  % 表の参照を定義
