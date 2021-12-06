@@ -1,0 +1,75 @@
+\documentclass[a4j,uplatex,dvipdfmx,11pt]{jsarticle}    % 文章クラスとオプション設定
+%%%%%%%%%% スタイル %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% 複数行コメント
+\usepackage{comment}    
+
+% 余白の調整
+\usepackage[top=30truemm,bottom=30truemm,left=20truemm,right=20truemm]{geometry}
+
+% 数式関連
+\usepackage{amsmath,amssymb,nccmath}    % 数式
+\usepackage{bm}         % ベクトルの太文字
+\newcommand{\alignref}[1]{\textbf{式(\ref{#1})}}    % 数式参照
+
+% 画像関連
+\usepackage{graphicx} % 画像
+\usepackage{here}% figureの位置調整
+\renewcommand{\figurename}{\textbf{Fig.}}    % 画像キャプション
+\newcommand{\figurenameref}[1]{\textbf{Fig.\ref{#1}}}   % 画像の参照を定義
+
+% 表設定
+\usepackage{multirow}   % 表の行の結合
+\usepackage{longtable}  % ページをまたぐ長い表
+\renewcommand{\tablename}{\textbf{Table.}}   % 表キャプション
+\newcommand{\tablenameref}[1]{\textbf{Table.\ref{#1}}}  % 表の参照を定義
+
+% ソースコード
+\usepackage{listings,plistings}
+\renewcommand{\lstlistingname}{\textbf{Source Code.}}    % ソースコードキャプション
+\newcommand{\lstlistingnameref}[1]{\textbf{Source Code.\ref{#1}}}   % ソースコード参照
+
+\lstset{
+    language=C++,       % 言語設定
+    frame=shadowbox,    % 枠設定
+    breaklines=true,    % 行が長くなった場合自動改行
+    breakindent=12pt,   % 自動改行時のインデント
+    columns=fixed,      % 文字の間隔を統一
+    basewidth=0.5em,    % 文字の横のサイズを小さく
+    numbers=left,       % 行数の位置
+    numberstyle={\scriptsize},  % 行数のフォント
+    stepnumber=1,       % 行数の増間
+    numbersep=1zw,      % 行数の余白
+    xrightmargin=0zw,   % 左の余白
+    xleftmargin=2zw,    % 右の余白
+    framexleftmargin=18pt,  
+    keepspaces=true,    % スペースを省略せず保持
+    lineskip=-0.2ex,    % 枠線の途切れ防止
+    tabsize = 4,        % タブ数
+    showstringspaces=false,  %文字列中の半角スペースを表示させない
+    basicstyle     ={\small\ttfamily},             % 基礎の文字のフォント設定
+    identifierstyle={\small},           % 変数名などのフォント設定
+    keywordstyle={\small\bfseries},     % 予約語などのフォント設定
+}
+%%%%%%%%%% 本文 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\input{title.tex}
+
+\tableofcontents
+\newpage
+
+\input{section1.tex}
+\input{section2.tex}
+\input{section3.tex}
+\input{section4.tex}
+\input{section5.tex}
+\input{section6.tex}
+\input{section7.tex}
+
+%%%%%%%%%% 参考文献 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{ref.tex}
+
+\end{document}
